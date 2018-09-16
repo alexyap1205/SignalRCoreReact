@@ -1,0 +1,41 @@
+{
+  "name": "signalr-client",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron-starter.js",
+  "homepage": "./",
+  "dependencies": {
+    "@aspnet/signalr": "^1.1.0-preview2-35157",
+    "axios": "^0.18.0",
+    "electron-is-dev": "^0.3.0",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.1",
+    "react-scripts": "1.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-start": "electron .",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "preelectron-pack": "yarn build",
+    "electron-pack": "build --x64 — em.main=build/electron.js"
+  },
+  "devDependencies": {
+    "concurrently": "^4.0.1",
+    "electron": "^2.0.9",
+    "electron-builder": "^20.28.4",
+    "wait-on": "^3.0.1"
+  },
+  "build": {
+    "appId": "com.signalr-client",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  }
+}

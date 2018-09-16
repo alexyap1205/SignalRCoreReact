@@ -328,3 +328,5 @@ ASALocalRun/
 
 # MFractors (Xamarin productivity tool) working folder 
 .mfractor/
+Client/signalr-client/dist/
+Client/signalr-client/yarn.lock
